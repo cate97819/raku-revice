@@ -1,25 +1,39 @@
+import { Data } from '@/app/page'
 import Link from 'next/link'
 import React from 'react'
 
 const areaList = [{
+  label: "全国",
+  href: "https://dev.venue.pages.dev/search",
+},{
   label: "関東",
-  href: "",
+  href: "https://dev.venue.pages.dev/search/q519yevsf4_y",
 },{
   label: "中部",
-  href: "",
+  href: "https://dev.venue.pages.dev/search/ajr3bzwc5",
 },{
   label: "関西",
-  href: "",
+  href: "https://dev.venue.pages.dev/search/3av8w4y1fp",
 }]
 
-const ChoseArea = () => {
+interface Props {
+  data: Data;
+}
+
+const ChoseArea = ({data}: Props) => {
+
+  const { contents } = data;
+
   return (
-    <div className='bg-[#08A1C1] py-4 md:py-8 md:px-32 text-white flex flex-col gap-4 md:gap-10 w-full md:w-fit text-center rounded-3xl'>
-      <p className='text-base md:text-3xl text-nowrap w-full'>まずは開催地を選択</p>
-      <ul className='flex flex-row gap-6 md:gap-14 justify-center'>
+    <div className='py-6 px-8 flex flex-col lg:flex-row gap-8 w-full md:w-fit text-center rounded-3xl items-center mx-auto bg-slate-200'>
+      <p className='text-base text-nowrap w-full flex flex-col gap-1'>
+        <span className='text-xs text-[#08A1C1] bg-white border-[1px] border-[#08A1C1] py-0.5'>{contents.length}会場掲載中</span>
+        まずは開催地を選択
+      </p>
+      <ul className='flex flex-row gap-2 justify-center'>
         {areaList.map((item, i) => (
           <li key={i}>
-            <Link href={item.href} className='bg-gradient-to-r from-[#f89d00] to-[#ff6600] text-base md:text-3xl px-4 md:px-8 py-2 rounded-xl text-nowrap'>{item.label}</Link>
+            <Link href={item.href} className='bg-slate-900 text-base px-4 py-1 rounded-sm text-nowrap text-white hover:bg-slate-600 transition-all ease-in-out'>{item.label}</Link>
           </li>
         ))}
       </ul>

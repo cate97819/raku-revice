@@ -2,20 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.openbtn1{
+  position: relative;
+  cursor: pointer;
+    width: 42px;
+    height:42px;
+  border-radius: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*ボタン内側*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 7.2px;
+    height: 3px;
+    border-radius: 2px;
+    width: 65%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:10px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:20px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:30px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 13px;
+    left: 10px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 55%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 26px;
+    left: 10px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 55%;
+}
+
+.kvWrapper {
+  background-image: url('/images/kv_bg.jpg');
+  background-size: cover;
+  background-position-y: 60%;
+}
+
+@media (min-width: 640px) {
+  .kvWrapper {
+    background-position-y: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .kvWrapper {
+    background-image: url('/images/kv_bg_pc.jpg');
+    background-size: cover;
+    background-position-x: 50%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-padding-top: 100px; /* ヘッダー分の高さを記載で上部オフセット */
+  scroll-behavior: smooth; /* ページ内リンクのスクロールをスムース化 */
+}
+
+@media (min-width:1280px ) {
+  html {
+      scroll-padding-top: 100px;
+      scroll-behavior: smooth;
+  }
+}
+
+.venuewrapper {
+  animation: venuewrapper 60s infinite linear 0.5s both;
+}
+
+@keyframes venuewrapper {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-78.1%);
+  }
 }

@@ -8,7 +8,7 @@ interface Props {
 const EventTypeImage = ({eventImageArray}: Props) => {
 
   const [slide, setSlide] = useState(0)
-  const slideLength = eventImageArray.length -1;
+  const slideLength = eventImageArray.length * 3 - 1;
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,8 +17,14 @@ const EventTypeImage = ({eventImageArray}: Props) => {
   },[slide])
 
   return (
-    <div className='relative overflow-clip max-w-[1000px] mx-auto aspect-video rounded-3xl my-10'>
+    <div className='relative overflow-clip max-w-[1000px] mx-auto aspect-video rounded-3xl my-0 lg:my-10 mx-4'>
       <ul className='w-full flex flex-col absolute transition-all ease-in-out' style={{top: `-${slide > 0 ? slide * 100 : 0}%`}}>
+        {eventImageArray.map((item, i) => (
+            <img key={i} src={item} alt="" className='aspect-video object-cover blur-[0.2em]'/>
+        ))}
+        {eventImageArray.map((item, i) => (
+            <img key={i} src={item} alt="" className='aspect-video object-cover blur-[0.2em]'/>
+        ))}
         {eventImageArray.map((item, i) => (
             <img key={i} src={item} alt="" className='aspect-video object-cover blur-[0.2em]'/>
         ))}

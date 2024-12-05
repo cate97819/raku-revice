@@ -9,3 +9,16 @@ export const headerItem = [{
     href: "#"
   }
 ]
+export const appLinks = [{
+  key: 0,
+  href: "/",
+  label: "関東",
+},{
+  key: 1,
+  href: "/",
+  label: "中部",
+},{
+  key: 2,
+  href: "/",
+  label: "関西",
+},]
