@@ -13,7 +13,7 @@ const EventTypeSlide = ({eventTypeArray}: Props) => {
     setTimeout(() => {
       setOrder(prev => prev < orderLength ? prev + 1 : 0);
     }, 3000)
-  },[order])
+  },[order, orderLength])
   
 
   return (

@@ -14,7 +14,7 @@ const EventTypeImage = ({eventImageArray}: Props) => {
     setTimeout(() => {
       setSlide(prev => prev < slideLength ? prev + 1 : 0)
     }, 3000)
-  },[slide])
+  },[slide, slideLength])
 
   return (
     <div className='relative overflow-clip max-w-[1000px] mx-auto aspect-video rounded-3xl my-0 lg:my-10 mx-4'>

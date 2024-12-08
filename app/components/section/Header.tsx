@@ -1,31 +1,7 @@
 'use client'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import HamMenu from '../ui/hamMenu';
-import { appLinks } from '@/docs';
+import React from 'react'
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
-  const listItem = [{
-    key: 0,
-    label: "できること",
-    href: "/#about",
-  },{
-    key: 1,
-    label: "選ばれる理由",
-    href: "/#chosen",
-  },{
-    key: 2,
-    label: "よくある質問",
-    href: "/#faq",
-  }
-];
-
-const setToggleHandler = () => {
-  setToggle(!toggle);
-}
-
-
 
   return (
     <header className=''>
