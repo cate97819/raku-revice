@@ -7,14 +7,12 @@ interface Props {
 
 const Contact = ({data}: Props) => {
 
-  const { contents } = data;
-
   return (
     <div className='bg-slate-700 py-10 text-white'>
       <div className='max-w-[1200px] mx-auto w-full text-center grid grid-cols-2'>
         <div className='space-y-4'>
           <h1 className='flex flex-col gap-1'>
-            <span className='block text-xs border-[1px] px-4 py-0.5 border-white w-fit mx-auto'>{contents.length}会場掲載中</span>
+            <span className='block text-xs border-[1px] px-4 py-0.5 border-white w-fit mx-auto'>{data.length}会場掲載中</span>
             まずは会場を探してみる
           </h1>
           <ul className='flex flex-row gap-3 justify-center'>

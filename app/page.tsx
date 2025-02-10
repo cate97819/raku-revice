@@ -1,4 +1,4 @@
-import { client } from "@/libs/client";
+import { client, getVenueData } from "@/libs/client";
 import Build from "./components/section/Build";
 import Contact from "./components/section/Contact";
 import FirstView from "./components/section/FirstView";
@@ -9,7 +9,6 @@ import Venue from "./components/section/Venue";
 import Manual from "./components/section/Manual";
 
 export type Data = {
-  contents: {
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -44,15 +43,11 @@ export type Data = {
       estimateFile1: string
     },
     website: string,
-}[]}
+}
 
 export default async function Home() {
-  const data: Data  = await client.get({
-    endpoint: "venue",
-    queries: {
-      limit: 100
-    }
-  })
+  
+  const data = await getVenueData(600);
 
   return (
     <>

@@ -4,19 +4,20 @@ import Link from 'next/link';
 import React from 'react'
 
 interface Props {
-  data: Data;
+  data: Data[];
 }
 
 const Venue = ({data}: Props) => {
-  const { contents } = data;
-  const array = shuffleArray(contents).slice(0, 9);
+  const venues = data.filter((item) => item.venueData !== null)
+  const array: Data[] = shuffleArray(venues).slice(0, 7);
+  console.log(array[0]);
 
   return (
-    <div className='w-full overflow-x-clip pt-10 pb-28 bg-slate-50'>
+    <div className='w-full overflow-x-clip pt-8 pb-8 bg-slate-50'>
       <h1 className='pb-6 text-center text-xl flex flex-col gap-1'>ご利用いただける会場<span className='text-xs text-slate-500 font-bold'>（一部抜粋）</span></h1>
-      <ul className='w-[200vw] grid grid-cols-[repeat(20,1fr)] gap-4 venuewrapper'>
+      <ul className='w-[200vw] grid grid-cols-[repeat(14,1fr)] gap-4 venuewrapper'>
         {array.map((item, i) => (
-          <li key={i} className='bg-slate-200 aspect-video p-2 '>
+          <li key={i} className='bg-slate-200 p-2'>
             <Link href={`https://dev.venue.pages.dev/search/${item.area.id}/${item.id}`} className="hover:opacity-80 transition-all ease-in-out flex flex-col gap-2">
               <img className='aspect-video object-cover w-full' src={item.outerThumbnail} alt={`${item.venueName} ${item.hallName}`}/>
               <div className=''>
@@ -27,7 +28,7 @@ const Venue = ({data}: Props) => {
           </li>
         ))}
         {array.map((item, i) => (
-          <li key={i} className='bg-slate-200 aspect-video p-2 '>
+          <li key={i} className='bg-slate-200 p-2 '>
             <Link href="" className="hover:opacity-80 transition-all ease-in-out flex flex-col gap-2">
               <img className='aspect-video object-cover w-full' src={item.outerThumbnail} alt={`${item.venueName} ${item.hallName}`}/>
               <div className=''>

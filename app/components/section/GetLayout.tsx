@@ -10,18 +10,11 @@ const GetLayout = () => {
       <p className='text-center'>
         選んだ会場のまっさらな図面と、イベント開催時に実際にブースを設置した際の図面を確認することが出来ます。<br/>イベント開催時の会場導線や必要となる備品を事前に確認することで、開催時の想定やイメージ共有を手助けします。
       </p>
-      <dl className='grid grid-cols-2 text-center py-10'>
+      <dl className='grid grid-cols-1 text-center py-10'>
         <div>
-          <dt>会場図面</dt>
-          <dd className='px-10 py-4'>
-            <div className='aspect-video bg-slate-200'></div>
-          </dd>
-        </div>
-        <div>
-          <dt>ブースレイアウト図面</dt>
-          <dd className='px-10 py-4'>
-            <div className='aspect-video bg-slate-200'></div>
-          </dd>
+          <div className='px-10 py-4'>
+            <img src="/images/plansheet.jpg" alt="" className='mx-auto bg-slate-200 aspect-video w-full max-w-[700px]'/>
+          </div>
         </div>
       </dl>
     </div>
