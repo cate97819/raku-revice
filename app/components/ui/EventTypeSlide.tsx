@@ -17,7 +17,7 @@ const EventTypeSlide = ({eventTypeArray}: Props) => {
   
 
   return (
-    <div className='flex flex-row md:flex-row items-center mx-auto w-fit md:text-2xl text-slate-900 bg-white p-4 rounded-3xl gap-4 md:gap-0 font-bold'>
+    <div className='flex flex-row md:flex-row items-center mx-auto w-fit md:text-2xl text-black bg-white p-4 rounded-3xl gap-4 md:gap-0 font-bold'>
       <div className='relative my-0 lg:mx-10 py-6 md:py-10 overflow-clip min-w-32 lg:min-w-60 bg-[#08A1C1] text-center rounded-lg shadow-xl text-white'>
         <ul style={{"top": `-${order > 0 ? order * 150 : 0}%`}} className='hidden lg:flex absolute translate-y-4 md:translate-y-5 text-nowrap w-full flex-col gap-[1.12em] md:gap-20 transition-all ease-in-out text-lg md:text-4xl'>
           {eventTypeArray.map((item, i) => (
@@ -48,7 +48,7 @@ const EventTypeSlide = ({eventTypeArray}: Props) => {
           ))}
         </ul>
       </div>
-      イベントの<br/>規模感がわかる！
+      イベントの<br/>会場がみつかる！
     </div>
   )
 }

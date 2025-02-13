@@ -28,23 +28,23 @@ interface Props {
 const ChoseArea = ({ data }: Props) => {
   return (
     <>
-      <h1 className="text-3xl font-bold leading-10 px-10 py-2 mx-auto w-fit text-[#08A1C1] bg-white/15 backdrop-blur-[0.01em]">
-      開催地や行いたいイベントの規模から
+      <h1 className="sm:text-3xl font-bold leading-[1.5em] px-10 py-2 mx-auto w-fit text-black bg-white/15 backdrop-blur-[0.01em]">
+      開催地や行いたいイベントの規模から<br/>
       条件に合った会場を探せます
       </h1>
-      <div className="p-8 flex flex-col gap-8 w-full text-center rounded-3xl items-center mx-auto bg-slate-100">
-        <p className="text-xl font-bold text-nowrap w-full flex flex-col gap-4">
-          <span className="text-base text-[#08A1C1] font-normal bg-white border-2 border-[#08A1C1] py-1">
+      <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-8 w-full text-center rounded-3xl items-center mx-auto bg-slate-100 drop-shadow-lg">
+        <p className="text-base sm:text-2xl font-bold text-nowrap w-full flex flex-col gap-4">
+          <span className="text-xs sm:text-base font-normal text-white border-2 bg-[#08A1C1] py-1 px-12 w-fit mx-auto">
             {data.length}会場掲載中
           </span>
           まずは開催地を選択
         </p>
-        <ul className="grid grid-cols-2 gap-4 justify-center">
+        <ul className="grid grid-cols-2 gap-y-4 gap-x-6 sm:gap-4 justify-center">
           {areaList.map((item, i) => (
             <li key={i}>
               <Link
                 href={item.href}
-                className="inline-block bg-slate-900 text-2xl px-16 py-4 rounded-sm text-nowrap text-white hover:bg-slate-600 transition-all ease-in-out"
+                className="inline-block bg-slate-900 text-base sm:text-2xl px-10 sm:px-16 py-2 sm:py-4 rounded-sm text-nowrap text-white hover:bg-slate-600 transition-all ease-in-out"
               >
                 {item.label}
               </Link>
