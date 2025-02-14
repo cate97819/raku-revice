@@ -2,10 +2,10 @@ import React from 'react'
 
 const Manual = () => {
   return (
-    <div className='py-14 text-center bg-sky-700 text-white'>
+    <div className='py-14 text-center bg-sky-700 text-white px-4'>
       <div className='max-w-[1200px] mx-auto w-full space-y-10'>
-        <h1 className='flex flex-col text-2xl gap-1'>
-          <span className='text-base'>
+        <h1 className='flex flex-col text-xl sm:text-2xl gap-1'>
+          <span className='text-sm sm:text-base'>
             イベント開催の参考にできる
           </span>
           イベント運営マニュアルをプレゼント
