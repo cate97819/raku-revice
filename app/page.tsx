@@ -1,4 +1,4 @@
-import { client, getVenueData } from "@/libs/client";
+import { getVenueData } from "@/libs/client";
 import Build from "./components/section/Build";
 import Contact from "./components/section/Contact";
 import FirstView from "./components/section/FirstView";

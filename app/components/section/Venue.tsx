@@ -3,14 +3,14 @@ import { Data } from "@/app/page";
 import { shuffleArray } from "@/libs/shuffleArray";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { getWindowSize } from "../hooks/getWindowSize";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 interface Props {
   data: Data[];
 }
 
 const Venue = ({ data }: Props) => {
-  const { height, width } = getWindowSize();
+  const { windowSize } = useWindowSize();
   const [venueArray, setVenueArray] = useState<Data[]>();
 
   const venues = data.filter((item) => item.venueData !== null);
@@ -24,9 +24,9 @@ const Venue = ({ data }: Props) => {
   };
 
   useEffect(() => {
-    const array: Data[] = setArrayHandler(width);
+    const array: Data[] = setArrayHandler(windowSize.width);
     setVenueArray(array);
-  }, [width]);
+  }, [windowSize]);
 
   return (
     <div className="w-full overflow-x-clip pt-8 pb-8 bg-slate-100 drop-shadow-[0_0_6px_rgba(0,0,0,0.2)]">

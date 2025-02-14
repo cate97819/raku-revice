@@ -2,7 +2,7 @@ import { Data } from '@/app/page'
 import React from 'react'
 
 interface Props {
-  data: Data
+  data: Data[]
 }
 
 const Contact = ({data}: Props) => {
