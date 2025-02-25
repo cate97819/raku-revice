@@ -1,7 +1,6 @@
 import { getVenueData } from "@/libs/client";
 import Build from "./components/section/Build";
 import Contact from "./components/section/Contact";
-import FirstView from "./components/section/FirstView";
 import Footer from "./components/section/Footer";
 import GetLayout from "./components/section/GetLayout";
 import Search from "./components/section/Search";
