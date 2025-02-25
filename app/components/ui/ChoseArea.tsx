@@ -28,7 +28,7 @@ interface Props {
 const ChoseArea = ({ data }: Props) => {
   return (
     <>
-      <h1 className="sm:text-3xl font-bold leading-[1.5em] px-10 py-2 mx-auto w-fit text-black bg-white/15 backdrop-blur-[0.01em]">
+      <h1 className="text-base md:text-3xl font-bold leading-[1.5em] py-2 mx-auto w-fit text-white mt-[100px] mb-10">
       開催地や行いたいイベントの規模から<br/>
       条件に合った会場を探せます
       </h1>
@@ -39,12 +39,12 @@ const ChoseArea = ({ data }: Props) => {
           </span>
           まずは開催地を選択
         </p>
-        <ul className="grid grid-cols-2 gap-y-4 gap-x-6 sm:gap-4 justify-center">
+        <ul className="grid grid-cols-2 gap-y-4 gap-x-4 sm:gap-4 justify-center w-full">
           {areaList.map((item, i) => (
             <li key={i}>
               <Link
                 href={item.href}
-                className="inline-block bg-slate-900 text-base sm:text-2xl px-10 sm:px-16 py-2 sm:py-4 rounded-sm text-nowrap text-white hover:bg-slate-600 transition-all ease-in-out"
+                className="inline-block bg-slate-900 text-sm md:text-2xl px-6 md:px-16 py-2 sm:py-4 rounded-sm text-nowrap text-white hover:bg-slate-600 transition-all ease-in-out"
               >
                 {item.label}
               </Link>

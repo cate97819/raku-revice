@@ -7,6 +7,7 @@ import GetLayout from "./components/section/GetLayout";
 import Search from "./components/section/Search";
 import Venue from "./components/section/Venue";
 import Manual from "./components/section/Manual";
+import FirstView2 from "./components/section/FirstView2";
 
 export type Data = {
     id: string,
@@ -51,7 +52,8 @@ export default async function Home() {
 
   return (
     <>
-      <FirstView data={data}/>
+      <FirstView2 data={data}/>
+      {/* <FirstView data={data}/> */}
       <Venue data={data}/>
       <Search/>
       <div className="bg-slate-100">
