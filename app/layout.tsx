@@ -8,7 +8,7 @@ const notoSansJP = Noto_Sans_JP({subsets: ["latin"], weight: ["100", "300", "500
 export const metadata: Metadata = {
   title: "EVENT NOVA｜さがそう、イベントの場。",
   description: "",
-  icons: [{ rel: 'icon', url: "/favicon.ico" }],
+  icons: [{ rel: 'icon', url: "/nova_favicon.ico" }],
 };
 
 export default function RootLayout({
