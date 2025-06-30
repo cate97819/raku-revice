@@ -11,7 +11,7 @@ const Footer = () => {
         </h1>
         <ul className='text-white text-sm underline flex flex-col gap-4 text-sm'>
           <li>
-            <a href="https://www.tohgashi.co.jp/pdf/kojinjouhou.pdf" target='_blank'>
+            <a href="https://www.tohgashi.co.jp/pdf/privacypolicy2024.10.pdf" target='_blank'>
               プライバシーポリシー
             </a>
           </li>
