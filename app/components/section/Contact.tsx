@@ -16,15 +16,15 @@ const Contact = ({data}: Props) => {
             まずは会場を探してみる
           </h1>
           <ul className='flex flex-row gap-3 justify-center text-sm sm:text-base'>
-            <li><button className='bg-white text-slate-700 px-4 py-1 font-bold rounded-md'>全国</button></li>
-            <li><button className='bg-white text-slate-700 px-4 py-1 font-bold rounded-md'>関東</button></li>
-            <li><button className='bg-white text-slate-700 px-4 py-1 font-bold rounded-md'>中部</button></li>
-            <li><button className='bg-white text-slate-700 px-4 py-1 font-bold rounded-md'>関西</button></li>
+            <li><a href='https://eventnova.jp/search' className='bg-white hover:bg-white/80 text-slate-700 px-4 py-1 font-bold rounded-md transition-all ease-in-out'>全国</a></li>
+            <li><a href="https://eventnova.jp/search/q519yevsf4_y" className='bg-white hover:bg-white/80 text-slate-700 px-4 py-1 font-bold rounded-md transition-all ease-in-out'>関東</a></li>
+            <li><a href='https://eventnova.jp/search/ajr3bzwc5' className='bg-white hover:bg-white/80 text-slate-700 px-4 py-1 font-bold rounded-md transition-all ease-in-out'>中部</a></li>
+            <li><a href='https://eventnova.jp/search/3av8w4y1fp' className='bg-white hover:bg-white/80 text-slate-700 px-4 py-1 font-bold rounded-md transition-all ease-in-out'>関西</a></li>
           </ul>
         </div>
         <div className='space-y-4'>
           <h1 className='text-sm sm:text-base'>サービスに関するお問い合わせはこちら</h1>
-          <button className='mx-auto inline-block w-fit bg-white text-slate-700 px-10 py-2 rounded-full hover:bg-white/80 transition-all ease-in-out font-bold'>お問い合わせ</button>
+          <a href='https://www.tohgashi.co.jp/contact/' target='_blank' className='mx-auto inline-block w-fit bg-white text-slate-700 px-10 py-2 rounded-full hover:bg-white/80 transition-all ease-in-out font-bold'>お問い合わせ</a>
         </div>
       </div>
     </div>
