@@ -5,19 +5,19 @@ import React from "react";
 const areaList = [
   {
     label: "全国",
-    href: "https://dev.venue.pages.dev/search",
+    href: "https://eventnova.jp/search",
   },
   {
     label: "関東",
-    href: "https://dev.venue.pages.dev/search/q519yevsf4_y",
+    href: "https://eventnova.jp/search/q519yevsf4_y",
   },
   {
     label: "中部",
-    href: "https://dev.venue.pages.dev/search/ajr3bzwc5",
+    href: "https://eventnova.jp/search/ajr3bzwc5",
   },
   {
     label: "関西",
-    href: "https://dev.venue.pages.dev/search/3av8w4y1fp",
+    href: "https://eventnova.jp/search/3av8w4y1fp",
   },
 ];
 

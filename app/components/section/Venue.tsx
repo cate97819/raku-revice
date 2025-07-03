@@ -36,7 +36,7 @@ const Venue = ({ data }: Props) => {
           {venueArray.map((item, i) => (
             <li key={i} className="bg-white p-2 drop-shadow-lg">
               <Link
-                href={`https://dev.venue.pages.dev/search/${item.area.id}/${item.id}`}
+                href={`https://eventnova.jp/search/${item.area.id}/${item.id}`}
                 className="hover:opacity-80 transition-all ease-in-out flex flex-col gap-2"
               >
                 <img
