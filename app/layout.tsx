@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <GoogleTagManager gtmId="G-7627DW9HT2"/>
+      <GoogleTagManager gtmId="GTM-NFHJK6F"/>
       <body
         className={`${notoSansJP.className} antialiased`}
       >
