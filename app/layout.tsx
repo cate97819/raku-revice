@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "./components/section/Header";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const notoSansJP = Noto_Sans_JP({subsets: ["latin"], weight: ["100", "300", "500", "700", "900"]});
 
@@ -18,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <head>
-        
-      </head>
+      <GoogleTagManager gtmId="G-7627DW9HT2"/>
       <body
         className={`${notoSansJP.className} antialiased`}
       >

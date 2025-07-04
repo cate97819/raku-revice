@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.4.0-canary.113",
     "microcms-js-sdk": "^3.1.2",
     "next": "^15.3.5",
     "react": "^19.1.0",
